@@ -20,8 +20,8 @@ ENV environment development
 ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8
 ENV FLASK_APP iris_classifier.py
+#optional only when .pk files doesnot work
+RUN python3 models/model_generator.py
 
 CMD ["python3", "-m", "flask", "run", "--host", "0.0.0.0"]
-
-
 
